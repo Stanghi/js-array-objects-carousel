@@ -4,13 +4,64 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CDN Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <link rel="stylesheet" href="assets/css/style.css">
         <title>Carosello Array di Oggetti</title>
     </head>
     <body>
 
+        <!-- HEADER -->
+        <header>
+            <div class="navbar">
+                <img src="assets/img/logo.png" alt="logo">
+            </div>
+        </header>
+
         <!-- MAIN -->
-        <main></main>
+        <main>
+            <div class="main-container d-flex">
+
+                <div class="slider">
+                    <div class="active-img">
+                        <img src="assets/img/norris.jpg" class="pilot-active" alt="norris">
+
+                        <div class="info-pilot">
+                            <h2>Lando Norris</h2>
+                            <p>Scuderia: McLaren</p>
+                        </div>
+
+                        <div class="btn-arrow btn-left">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div class="btn-arrow btn-right">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="group-img d-flex">
+                        <div class="box-pilot">
+                            <img src="assets/img/hamilton.jpg" class="pilot" alt="hamilton">
+                        </div>
+                        <div class="box-pilot">
+                            <img src="assets/img/leclerc.jpg" class="pilot" alt="leclerc">
+                        </div>
+                        <div class="box-pilot">
+                            <img src="assets/img/norris.jpg" class="pilot pilot-active" alt="norris">
+                        </div>
+                        <div class="box-pilot">
+                            <img src="assets/img/russel.jpg" class="pilot" alt="russel">
+                        </div>
+                        <div class="box-pilot">
+                            <img src="assets/img/verstappen.jpg" class="pilot" alt="verstappen">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
 
         <script src="assets/js/script.js"></script>
     </body>
