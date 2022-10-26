@@ -33,23 +33,26 @@ const f1pilot = [
 
 let counterImgs = 0;
 let numImgs = f1pilot.length;
+let totalPilot = f1pilot.length;
 
 const slider = document.querySelector('.slider');
 const textOutput = document.querySelector('.info-pilot');
 const pilotBig = document.querySelector('.pilot-big');
 const pilotActive = document.getElementsByClassName('pilot');
+const boxPilot = document.querySelector('.group-img');
 
 const prev = document.querySelector('.btn-left');
 const next = document.querySelector('.btn-right');
 
 pilotActive[counterImgs].classList.add('pilot-active');
 
+
 autoCarousel();
 
 for (indice in f1pilot){
-
     prev.addEventListener('click', prevFunction);
     next.addEventListener('click', nextFunction);
+    boxPilot.addEventListener('click', clickPilot);
 
     const pilot = f1pilot[counterImgs];
 
@@ -72,6 +75,11 @@ function nextFunction(){
     const pilot = f1pilot[counterImgs];
     output(pilot);
     pilotActive[counterImgs].classList.add('pilot-active');
+}
+
+function clickPilot(){
+    boxPilot.idElement = counterImgs + 1;
+    console.log(this.idElement);
 }
 
 function output(pilot){

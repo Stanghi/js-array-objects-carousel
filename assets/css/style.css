@@ -75,23 +75,29 @@ body{
 .slider{
     width: 55%;
     height: 80%;
+    overflow: hidden;
+    border-radius: 15px ;
     background-color: black;
 }
 
 .active-img{
-    height: 75%;
+    height: 80%;
     position: relative;
     overflow: hidden;
 }
 
 .active-img img{
+    top: 0;
     position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0%;
 }
 
 .group-img{
     position: relative;
-    height: 25%;
+    height: calc(100% - 75%);
 }
 
 .box-pilot{
@@ -103,12 +109,21 @@ body{
 .pilot{
     position: absolute;
     width: 100%;
+    height: 100%;
     opacity: .5;
+    object-fit: cover;
+    object-position: 50% 0%;
+    cursor: pointer;
+}
+
+.pilot:hover{
+    scale: 1.1;
 }
 
 .pilot-active{
     opacity: 1;
     border: 1px solid #f7f4f1;
+    scale: 1.1;
 }
 
 .info-pilot{
@@ -122,5 +137,3 @@ body{
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-
-/* -----------------FOOTER----------------- */
